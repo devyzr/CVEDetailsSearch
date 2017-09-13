@@ -56,7 +56,7 @@ class CVEDetailsSearch:
 			cve_list.append(x)
 
 		cve_list = sorted(cve_list, key=lambda cve_list:float(cve_list[2]), reverse=True)
-		cve_list_titles = [['CVE', 'Short Description', 'Severity', 'Access', 'Complecity', 'Authentication', 'Confidentiality', 'Integrity', 'Availability', 'Full Description']]
+		cve_list_titles = [['CVE', 'Short Description', 'Severity', 'Access', 'Complexity', 'Authentication', 'Confidentiality', 'Integrity', 'Availability', 'Full Description']]
 		cve_list = cve_list_titles + cve_list
 
 		with open(filename, 'w', newline='') as f:
