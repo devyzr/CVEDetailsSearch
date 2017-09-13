@@ -66,7 +66,8 @@ class CVEDetailsSearch:
 
 
 	def get_link_text(self,link):
-		link = 'https://www.cvedetails.com'+ link
+		if 'www.cvedetails.com' not in link: 
+			link = 'https://www.cvedetails.com'+ link
 		r = requests.get(link)
 		if(r.status_code == 200):
 			return r.text
