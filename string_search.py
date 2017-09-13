@@ -122,6 +122,8 @@ class CVEDetailsSearch:
 			# If string for resumed vul is empty we state the resumed version is not available.
 			if not cve_resumed:
 				cve_resumed = 'N/A'
+			if cve_resumed.startswith('+'):
+				cve_resumed = cve_resumed[1:]
 			# 8
 			cve_description = cve_details.td.text.strip()
 			# Append values to CVE dictionary
